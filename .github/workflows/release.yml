@@ -22,5 +22,6 @@ jobs:
         with:
           distribution: goreleaser
           version: '~> v2'
+          args: release --clean
         env:
           GITHIB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

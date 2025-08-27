@@ -1,11 +1,17 @@
-name: Release
+# .github/workflows/release.yml
+name: goreleaser
+
 on:
   push:
     tags:
-      - '*'
+      - "*"
+  workflow_dispatch:
 
 permissions:
   contents: write
+  # packages: write
+  # issues: write
+  # id-token: write
 
 jobs:
   goreleaser:
